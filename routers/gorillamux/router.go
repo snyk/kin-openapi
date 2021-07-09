@@ -12,9 +12,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
-	"github.com/getkin/kin-openapi/routers"
 	"github.com/gorilla/mux"
+	"github.com/snyk/kin-openapi/openapi3"
+	"github.com/snyk/kin-openapi/routers"
 )
 
 // Router helps link http.Request.s and an OpenAPIv3 spec
