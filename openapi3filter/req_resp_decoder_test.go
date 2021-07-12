@@ -1031,6 +1031,12 @@ func TestDecodeBody(t *testing.T) {
 			want: "foo",
 		},
 		{
+			name: "json",
+			mime: "application/vnd.api+json",
+			body: strings.NewReader("\"foo\""),
+			want: "foo",
+		},
+		{
 			name: "urlencoded form",
 			mime: "application/x-www-form-urlencoded",
 			body: strings.NewReader(urlencodedForm.Encode()),

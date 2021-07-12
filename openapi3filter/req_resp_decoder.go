@@ -831,6 +831,8 @@ func init() {
 	RegisterBodyDecoder("application/x-www-form-urlencoded", urlencodedBodyDecoder)
 	RegisterBodyDecoder("multipart/form-data", multipartBodyDecoder)
 	RegisterBodyDecoder("application/octet-stream", FileBodyDecoder)
+	// custom Content-Type
+	RegisterBodyDecoder("application/vnd.api+json", jsonBodyDecoder)
 }
 
 func plainBodyDecoder(body io.Reader, header http.Header, schema *openapi3.SchemaRef, encFn EncodingFn) (interface{}, error) {
